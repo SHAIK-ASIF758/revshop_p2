@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Particle Animation for E-commerce</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ <style type="text/css">
+ /* Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(255, 204, 204), rgb(204, 255, 204), rgb(204, 204, 255), rgb(255, 255, 204)); /* Gradient background */
+    height: 100vh;
+}
+
+/* Preloader Styles */
+.preloader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.logo-container img {
+  width: 120px;
+}
+
+.progress-bar {
+  width: 180px;
+  height: 4px;
+  background-color: #ddd;
+  margin-top: 20px;
+  position: relative;
+}
+
+.progress-bar div {
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+  animation: progress 1.5s infinite ease;
+}
+
+@keyframes progress {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Main Content Styling */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  position: relative;
+  transition: opacity 1s ease;
+}
+
+.content h1 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #333;
+  margin-top: 20px;
+}
+
+.content-logo img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Enter Shop Button */
+.enter-button {
+  margin-top: 25px;
+  padding: 10px 25px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.enter-button:hover {
+  background-color: #555;
+  transform: scale(1.03);
+}
+
+/* Particles Container */
+#particles-js {
+  display: none;
+}
+
+ 
+ </style>
+</head>
+<body>
+    <!-- <div id="particles-js"></div>
+    Preloader Section
+    <div class="preloader">
+      <div class="logo-container">
+        <img th:src="@{/images/revshop.webp}" alt="RevShop Logo">
+      </div>
+      <div class="progress-bar">
+        <div></div>
+      </div>
+    </div>
+
+    Main Content
+    <div class="content" id="main-content">
+      Logo inside the main content
+      <div class="content-logo">
+        <img th:src="@{/images/revshop.webp}" alt="RevShop Logo">
+      </div>
+ <h1>Discover Amazing Deals at REVSHOP!</h1>
+    <h2 style=" color: rgb(40, 60, 90);">Your one-stop shop for everything you need.</h2>
+      Enter Shop Button -->
+      <a th:href="@{/ecom/welcomepage}">
+        <button class="enter-button">Enter Shop</button>
+      </a>
+    </div>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 100, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle", polygon: { nb_sides: 5 } },
+          opacity: { value: 0.5, random: false },
+          size: { value: 3, random: true },
+          line_linked: { enable: true, distance: 200, color: "#ffffff", opacity: 0.3, width: 3 },
+          move: { enable: true, speed: 6 }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } },
+          modes: { repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 } }
+        },
+        retina_detect: true
+      });
+
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          document.querySelector('.preloader').style.opacity = '0';
+          setTimeout(() => {
+            document.querySelector('.preloader').style.display = 'none';
+            document.getElementById('main-content').classList.add('fade-in');
+          }, 500);
+        }, 2000);
+      });
+    </script>
+</body>
+</html>

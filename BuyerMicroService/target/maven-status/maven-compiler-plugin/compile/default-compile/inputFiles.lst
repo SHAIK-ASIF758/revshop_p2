@@ -1,0 +1,12 @@
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\aspect\LoggingAspect.java
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\BuyerMicroServiceApplication.java
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\controller\BuyerController.java
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\controller\ForgotPasswordController.java
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\controller\FrontpagesController.java
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\exception\GlobalExceptionHandler.java
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\model\Buyer.java
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\repository\BuyerRepository.java
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\service\BuyerService.java
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\service\EmailService.java
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\service\ForgotService.java
+C:\Users\Asif\git\RevshopP2\BuyerMicroService\src\main\java\com\example\BuyerMicroService\utils\PasswordUtils.java

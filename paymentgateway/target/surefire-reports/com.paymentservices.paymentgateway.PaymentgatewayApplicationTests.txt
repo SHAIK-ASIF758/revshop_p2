@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.paymentservices.paymentgateway.PaymentgatewayApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.164 s -- in com.paymentservices.paymentgateway.PaymentgatewayApplicationTests
